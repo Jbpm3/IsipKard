@@ -5,3 +5,4 @@ This was my project in my Mobile Development Class
 
 Created using Java using Android Studio IDE
 
+Database used: NoSQL
