@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sidebar_container"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@android:color/transparent">
+
+    <!-- Background rounded container -->
+    <View
+        android:id="@+id/sidebar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="1dp"
+        android:background="#F8F8F8"
+        android:clipToOutline="true"
+        android:outlineProvider="background"/>
+
+    <!-- Top bar -->
+    <View
+        android:id="@+id/sidebar_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="#DAE3ED"/>
+
+    <!-- App title -->
+    <TextView
+        android:id="@+id/sidebar_title"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_marginTop="14dp"
+        android:text="IsipKard"
+        android:textColor="#FEFEFE"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <!-- Decks header container -->
+    <FrameLayout
+        android:id="@+id/decks_header_container"
+        android:layout_width="99dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="113dp">
+
+        <!-- Hamburger icon container -->
+        <FrameLayout
+            android:id="@+id/decks_hamburger_container"
+            android:layout_width="27dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="1.5dp">
+
+            <!-- Horizontal lines -->
+            <FrameLayout
+                android:id="@+id/decks_hamburger_lines"
+                android:layout_width="22dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="5dp">
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="22dp"
+                    android:layout_height="3dp"
+                    android:background="#DAE3ED"
+                    android:layout_gravity="top"/>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="22dp"
+                    android:layout_height="3dp"
+                    android:background="#DAE3ED"
+                    android:layout_marginTop="6dp"/>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="22dp"
+                    android:layout_height="3dp"
+                    android:background="#DAE3ED"
+                    android:layout_marginTop="12dp"/>
+            </FrameLayout>
+
+            <!-- Vertical dots -->
+            <FrameLayout
+                android:id="@+id/decks_hamburger_dots"
+                android:layout_width="3dp"
+                android:layout_height="15dp">
+
+                <View
+                    android:id="@+id/dot1"
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:background="#DAE3ED"/>
+
+                <View
+                    android:id="@+id/dot2"
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:background="#DAE3ED"
+                    android:layout_marginTop="6dp"/>
+
+                <View
+                    android:id="@+id/dot3"
+                    android:layout_width="3dp"
+                    android:layout_height="3dp"
+                    android:background="#DAE3ED"
+                    android:layout_marginTop="12dp"/>
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- Decks label -->
+        <TextView
+            android:id="@+id/decks_label"
+            android:layout_width="61dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="38dp"
+            android:gravity="center"
+            android:text="Decks"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <!-- Card Browser container -->
+    <FrameLayout
+        android:id="@+id/card_browser_container"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="161dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/card_browser" />
+        <!-- Label -->
+
+
+        <TextView
+            android:id="@+id/card_browser_label"
+            android:layout_width="135dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:text="Card Browser"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</FrameLayout>

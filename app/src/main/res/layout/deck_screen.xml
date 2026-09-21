@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- TOP BAR -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#148AD3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/deckAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IsipKard"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/btnBack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Deck Title -->
+    <TextView
+        android:id="@+id/deckTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deck 1"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"/>
+
+    <!-- Study Button -->
+    <TextView
+        android:id="@+id/studyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Study"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/deckTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Timed Mode Button -->
+    <TextView
+        android:id="@+id/timedModeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Timed Mode"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/studyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Edit Cards Button -->
+    <TextView
+        android:id="@+id/editCardsButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edit Cards"
+        android:textSize="32sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/timedModeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <!-- FAB MAIN -->
+    <ImageButton
+        android:id="@+id/fabAddCard"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/add"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- FAB CREATE DECK -->
+    <ImageButton
+        android:id="@+id/fabCreateDeck"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/add_deck"
+        android:background="@drawable/rounded_button"
+        android:visibility="gone"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@id/fabAddCard"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- FAB CREATE CATEGORY -->
+    <ImageButton
+        android:id="@+id/fabCreateCategory"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/add_category"
+        android:background="@drawable/rounded_button"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@id/fabCreateDeck"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
